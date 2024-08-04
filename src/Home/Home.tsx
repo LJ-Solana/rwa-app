@@ -2,18 +2,18 @@ import { useReactiveClient } from "@dynamic-labs/react-hooks";
 import { FC } from "react";
 import { client } from "../client";
 import { LoginView } from "../LoginView";
-import { DisplayAuthenticatedUserView } from "../DisplayAuthenticatedUserView";
+import { HomeView } from "./HomeView";
 import { Text } from "react-native";
 
 export const Home: FC = () => {
-  const { auth, sdk } = useReactiveClient(client);
+  const { auth, sdk, wallets } = useReactiveClient(client);
 
   if (!sdk.loaded) {
     return <Text>Loading...</Text>;
   }
 
   if (auth.token) {
-    return <DisplayAuthenticatedUserView />;
+    return <HomeView />;
   }
 
   return <LoginView />;

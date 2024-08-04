@@ -33,7 +33,6 @@ export const LoginView: FC = () => {
               key="otp"
               placeholder="Enter OTP token"
               onSubmit={onSubmit}
-              style={styles.input}
             />
             <TouchableOpacity
               style={styles.button}
@@ -55,7 +54,7 @@ export const LoginView: FC = () => {
       >
         <ScrollView contentContainerStyle={styles.scrollViewContent}>
           <Text style={styles.title}>RWA App</Text>
-          <Text style={styles.subTitle}>Gateway to investment opportunities</Text>
+          <Text style={styles.subTitle}>Gateway to the future of finance</Text>
          
           <TouchableOpacity
             style={[styles.button, styles.secondaryButton]}
